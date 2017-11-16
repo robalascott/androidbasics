@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +27,7 @@ public class MainGameActivity extends AppCompatActivity {
     private RecyclerView mainRecyclerView;
     private ColorAdapter mainColorAdapter;
     private List<ColorObject> colorList = new ArrayList<>();;
+    private TextView mainTextView, scoreTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,7 +70,10 @@ public class MainGameActivity extends AppCompatActivity {
     }
 
     public boolean UI(){
-
+        this.mainTextView = findViewById(R.id.mainTitle);
+        this.mainTextView.setText(R.string.main_title);
+        this.scoreTextView = findViewById(R.id.mainScore);
+        /*Adapter and Listners */
         mainRecyclerView= findViewById(R.id.playareaView);
         mainColorAdapter = new ColorAdapter(colorList,this);
         LinearLayoutManager llm = new LinearLayoutManager(this);
@@ -81,10 +86,17 @@ public class MainGameActivity extends AppCompatActivity {
             public void onItemClick(View v, int pos,String style) {
                 //This is dirty add new interface or enums
                 Log.i("Main","main");
+                checkresults(pos);
+
             }
         });
 
         return true;
+    }
+
+    public void checkresults(int pos){
+           this.colorList.get(pos).setAlpha(0.1f);
+           this.mainColorAdapter.notifyDataSetChanged();
     }
 
     public List<ColorObject> randomColorGen(int size){

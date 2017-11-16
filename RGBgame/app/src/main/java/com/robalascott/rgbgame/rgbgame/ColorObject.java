@@ -16,6 +16,13 @@ public class ColorObject {
         this.alpha = 1;
     }
 
+    public ColorObject(int red, int green ,int blue,float alpha){
+        this.red = red;
+        this.blue = blue;
+        this.green = green;
+        this.alpha = alpha;
+    }
+
     public int getRed() {
         return red;
     }

@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textColor="@color/colorAccent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:alpha="0.40"
+        android:layout_centerInParent="true"
+        android:src="@drawable/udacity" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Udacity"
+        android:id="@+id/companyTextView"
+        android:textStyle="italic|bold"
+        android:textColor="@color/colorAccent"
+        android:autoSizeMaxTextSize="32sp"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="5dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2465 Latham St"
+        android:id="@+id/streetTextView"
+        android:textColor="@color/colorAccent"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMaxTextSize="32sp"
+        android:paddingLeft="20dp"
+        android:paddingBottom="5dp"
+        android:layout_below="@+id/companyTextView" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mountain View, CA 94043"
+        android:id="@+id/addressTextView"
+        android:textColor="@color/colorAccent"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMaxTextSize="20sp"
+        android:paddingLeft="20dp"
+        android:paddingBottom="5dp"
+        android:layout_below="@+id/streetTextView"
+      />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="650-555-5555"
+        android:id="@+id/telefonTextView"
+        android:textColor="@color/colorAccent"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMaxTextSize="20sp"
+        android:paddingLeft="20dp"
+        android:paddingBottom="5dp" />
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="www.udacity.com"
+        android:id="@+id/websiteTextView"
+        android:textColor="#E8EAF6"
+        android:textStyle="italic|bold"
+        android:autoSizeMaxTextSize="32sp"
+        android:paddingRight="20dp"
+        android:paddingLeft="10dp"
+        android:paddingBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+       />
+
+</RelativeLayout>

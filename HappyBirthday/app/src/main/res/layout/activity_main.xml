@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:alpha="0.38"
+        android:src="@drawable/android_logo" />
+
+    <TextView android:text="@string/upperText"
+        android:layout_width="wrap_content"
+        android:textSize="36sp"
+        android:textColor="@color/colorTextString"
+        android:textStyle="bold|italic"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:padding="5dp"
+        android:id="@+id/textUpperView" />
+
+
+    <TextView
+        android:id="@+id/middleView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textUpperView"
+        android:layout_alignRight="@id/imageView"
+        android:fontFamily="sans-serif-light"
+        android:padding="5dp"
+        android:text="@string/middleText"
+        android:textColor="@color/colorTextString"
+        android:textSize="36sp"
+        android:textStyle="bold|italic" />
+
+    <TextView android:text="@string/lowerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorTextString"
+        android:textStyle="bold|italic"
+        android:textSize="36sp"
+        android:fontFamily="sans-serif-light"
+        android:layout_alignParentLeft="true"
+        android:padding="5dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/endView" />
+
+    <TextView android:text="@string/lowerFinalText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorTextString"
+        android:textStyle="bold|italic"
+        android:textSize="36sp"
+        android:fontFamily="sans-serif-light"
+        android:layout_alignParentRight="true"
+        android:padding="5dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/finalView" />
+
+</RelativeLayout>
