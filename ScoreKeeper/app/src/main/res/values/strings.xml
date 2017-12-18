@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name"></string>
+    <string name="score">0</string>
+    <string name="zero">0</string>
+    <string name="goal">GOAL!</string>
+    <string name="reset">RESET!</string>
+</resources>
