@@ -14,12 +14,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //
+        //Team Objects
         teamA = new TeamObject("TeamA",0,0,0,0);
         updateTeamA(teamA);
         teamB = new TeamObject("TeamB",0,0,0,0);
         updateTeamB(teamB);
-        //
+        //Create Listner object for commands
         findViewById(R.id.goalTeamA).setOnClickListener(mGlobal_OnClickListener);
         findViewById(R.id.shotsTeamAButton).setOnClickListener(mGlobal_OnClickListener);
         findViewById(R.id.yellowCardTeamAButton).setOnClickListener(mGlobal_OnClickListener);
@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.resetButton).setOnClickListener(mGlobal_OnClickListener);
     }
 
+    //Global Listner Object
     final View.OnClickListener mGlobal_OnClickListener = new View.OnClickListener() {
         public void onClick(final View v) {
             switch(v.getId()) {
@@ -85,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+    //Simple InIt for All Buttons and Textviews
     private void updateTeamA(TeamObject team) {
         TextView nameTextView =  findViewById(R.id.nameTeamA);
         nameTextView.setText("" + team.getName());
@@ -97,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
         TextView redTextView = findViewById(R.id.redCardTeamAButton);
         redTextView.setText("" + team.getCardRed());
     }
-
+    //Simple InIt for All Buttons and Textviews
     private void updateTeamB(TeamObject team) {
         TextView nameTextView =  findViewById(R.id.nameTeamB);
         nameTextView.setText("" + team.getName());
